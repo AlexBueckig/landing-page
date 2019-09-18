@@ -1,0 +1,79 @@
+body {
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: map-get($colors, dark-grey);
+  text-align: center;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: white;
+  margin: 0 0;
+  line-height: initial;
+}
+
+h1 + p {
+  color: map-get($colors, orange);
+  font-size: 1.3125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2 + p {
+  color: map-get($colors, orange);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.top-text {
+  font-weight: 900;
+  font-size: 0.625rem;
+  color: map-get($colors, orange);
+  text-transform: uppercase;
+  order: -1;
+  border-top: 5px solid map-get($colors, orange);
+  border-image: linear-gradient(to right, map-get($colors, gradient-1), map-get($colors, gradient-2)) 1;
+  margin: 0;
+  padding-top: 2px;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+@media (min-width: 550px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+
+    & + p {
+      flex: auto;
+    }
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .top-text {
+    flex: auto;
+  }
+}
